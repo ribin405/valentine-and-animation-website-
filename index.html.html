@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>For You — Happy Valentine's</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="card">
+    <img src="assets/heart.svg" alt="heart" class="hero-heart"/>
+    <h1 class="title">For You, My Love</h1>
+    <p class="subtitle">Happy Valentine's Day — I love you more every day.</p>
+
+    <button id="reveal" class="btn">Open your surprise</button>
+
+    <div id="message" class="message hidden">
+      <h2>You're my favorite person ❤️</h2>
+      <p>Thank you for filling my life with joy and light. — With all my love</p>
+    </div>
+
+    <section class="gallery-section initial-hidden">
+      <h3 class="section-title">Photos</h3>
+      <div class="gallery" id="gallery">
+        <div class="photo-wrap">
+          <img src="assets/photos/photo1.svg" alt="Photo 1" class="photo" data-caption="Our day at the park" />
+          <div class="photo-overlay"><button class="photo-reveal btn">Surprise</button></div>
+        </div>
+        <div class="photo-wrap">
+          <img src="assets/photos/photo2.svg" alt="Photo 2" class="photo" data-caption="That sunset together" />
+          <div class="photo-overlay"><button class="photo-reveal btn">Surprise</button></div>
+        </div>
+        <div class="photo-wrap">
+          <img src="assets/photos/photo3.svg" alt="Photo 3" class="photo" data-caption="My favorite smile" />
+          <div class="photo-overlay"><button class="photo-reveal btn">Surprise</button></div>
+        </div>
+        <div class="photo-wrap">
+          <img src="assets/photos/photo4.svg" alt="Photo 4" class="photo" data-caption="Coffee morning" />
+          <div class="photo-overlay"><button class="photo-reveal btn">Surprise</button></div>
+        </div>
+        <div class="photo-wrap">
+          <img src="assets/photos/photo5.svg" alt="Photo 5" class="photo" data-caption="Road trip" />
+          <div class="photo-overlay"><button class="photo-reveal btn">Surprise</button></div>
+        </div>
+        <div class="photo-wrap">
+          <img src="assets/photos/photo6.svg" alt="Photo 6" class="photo" data-caption="Cozy evening" />
+          <div class="photo-overlay"><button class="photo-reveal btn">Surprise</button></div>
+        </div>
+      </div>
+      <div style="margin-top:14px">
+        <button id="next-btn" class="btn surprise-btn hidden">next</button>
+        <p id="reveal-hint" style="font-size:14px;color:#d4b5c0;margin:0">Reveal all photos to unlock! 🔐</p>
+      </div>
+    </section>
+
+    <div id="quiz-modal" class="quiz-modal hidden" aria-hidden="true">
+      <button id="quiz-close" class="lb-close" aria-label="Close">✕</button>
+      <div class="quiz-card">
+        <h2 class="quiz-title">One more thing... 💭</h2>
+        <div id="quiz-container">
+          <div id="question-1" class="quiz-question">
+            <p class="question-text">What's your favorite memory with me?</p>
+            <div class="quiz-options">
+              <button class="quiz-option" data-answer="0" data-correct="false">A. Our first meeting</button>
+              <button class="quiz-option" data-answer="1" data-correct="true">B. Every moment together</button>
+              <button class="quiz-option" data-answer="2" data-correct="false">C. That special day</button>
+            </div>
+            <p id="answer-feedback-1" class="answer-feedback hidden"></p>
+          </div>
+          <div id="question-2" class="quiz-question hidden">
+            <p class="question-text">What do you love most about us?</p>
+            <div class="quiz-options">
+              <button class="quiz-option" data-answer="0" data-correct="false">A. Your smile</button>
+              <button class="quiz-option" data-answer="1" data-correct="false">B. Your kindness</button>
+              <button class="quiz-option" data-answer="2" data-correct="true">C. Everything</button>
+            </div>
+            <p id="answer-feedback-2" class="answer-feedback hidden"></p>
+          </div>
+        </div>
+        <button id="quiz-submit-btn" class="btn quiz-submit hidden">Check Answer</button>
+        <p id="quiz-progress" style="font-size:12px;color:#d4b5c0;margin-top:12px">Question 1 of 2</p>
+      </div>
+    </div>
+
+    <div id="ready-modal" class="ready-modal hidden" aria-hidden="true">
+      <button id="ready-close" class="lb-close" aria-label="Close">✕</button>
+      <div class="ready-card">
+        <h2>Quiz Complete! 💕</h2>
+        <p>You've unlocked the final surprise...</p>
+        <button id="final-surprise-btn" class="btn ready-btn">Are you ready for the real surprise?</button>
+      </div>
+    </div>
+
+    <div id="lightbox" class="lightbox hidden" aria-hidden="true">
+      <button id="lb-close" class="lb-close" aria-label="Close">✕</button>
+      <div class="photo-card">
+        <img id="lb-img" src="" alt="" />
+        <p id="lb-caption" class="lb-caption"></p>
+        <blockquote id="lb-quote" class="lb-quote"></blockquote>
+      </div>
+    </div>
+
+    <div id="quote-modal" class="quote-modal hidden" aria-hidden="true">
+      <button id="quote-close" class="lb-close" aria-label="Close">✕</button>
+      <div class="quote-card">
+        <img id="quote-photo" src="" alt="" />
+        <blockquote id="quote-text">You're wonderful — here's a little memory.</blockquote>
+        <p id="quote-author" class="quote-author"></p>
+      </div>
+    </div>
+
+    <div id="video-modal" class="video-modal hidden" aria-hidden="true">
+      <button id="video-close" class="lb-close" aria-label="Close">✕</button>
+      <div class="video-container">
+        <div class="video-screen">
+          <video id="surprise-video" controls autoplay>
+            <source src="assets/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
