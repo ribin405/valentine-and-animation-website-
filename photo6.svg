@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="100%" height="100%" fill="#fff3f6" rx="18"/>
+  <g transform="translate(28,28)">
+    <ellipse cx="180" cy="120" rx="120" ry="60" fill="#ff9fb8" />
+    <text x="180" y="130" font-size="22" text-anchor="middle" fill="#5a1a25" font-family="sans-serif">Cozy Evening</text>
+  </g>
+</svg>

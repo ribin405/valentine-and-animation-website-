@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="100%" height="100%" fill="#fff0f6" rx="18"/>
+  <g transform="translate(28,28)">
+    <rect x="40" y="40" width="280" height="160" rx="14" fill="#ff98b8" />
+    <text x="180" y="130" font-size="22" text-anchor="middle" fill="#58122a" font-family="sans-serif">Sunset</text>
+  </g>
+</svg>
